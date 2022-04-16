@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/sign_in/sigin_screen.dart';
 
 
 class TittleNav extends StatelessWidget {
@@ -113,7 +114,15 @@ class TittleNav extends StatelessWidget {
 
             children: [
               
-              RoundedButton(btn_name: 'Logout', press: () {})
+              RoundedButton(btn_name: 'Logout', press: () {
+                  Navigator.push(context,
+              MaterialPageRoute(
+                builder: (context) {
+                  return SignInScreen();
+                },
+              ),
+            );
+              })
              
             ],
           ),

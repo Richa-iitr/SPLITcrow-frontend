@@ -8,42 +8,14 @@ class NavBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    bool atFriends = true;
-    bool atGroup = false;
+    
     return Container(
   padding: const EdgeInsets.all(32),
   child: Row(
-    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    mainAxisAlignment: MainAxisAlignment.center,
     children: [
           
-          Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            /*2*/
-            GestureDetector(
-              onTap:() {
-            Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) {
-                  return Home();
-                },
-              ),
-            );
-          },
-          child: Padding(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: const Text(
-                'Friend ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color : Colors.white
-                ),
-              ),
-            )
-            )
-          ],
-        ),
+          
       
       /*3*/
       Column(
@@ -64,7 +36,7 @@ class NavBar extends StatelessWidget {
               child : Padding( 
               padding: const EdgeInsets.only(bottom: 8),
               child: const Text(
-                'Groups ',
+                'Groups Activity',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   color : Colors.white
@@ -76,23 +48,7 @@ class NavBar extends StatelessWidget {
           ],
         ),
 
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            /*2*/
-            Container(
-              padding: const EdgeInsets.only(bottom: 8),
-              child: const Text(
-                'Activity ',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  color : Colors.white
-                ),
-              ),
-            )
-           
-          ],
-        ),      
+             
     ],
   ),
 );
