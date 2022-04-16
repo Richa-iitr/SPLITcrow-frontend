@@ -36,8 +36,26 @@ class TittleNav extends StatelessWidget {
       /*3*/
       Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              
+              RoundedButton(btn_name: 'Add Rs', press: () {
+
+              })
+             
+            ],
+          ),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+
+            children: [ const Text("     "),
+             
+            ],
+          ),
+      Column(
+            mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
+              
               RoundedButton(btn_name: 'Logout', press: () {})
              
             ],
