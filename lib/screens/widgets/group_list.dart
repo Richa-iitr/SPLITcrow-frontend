@@ -1,4 +1,6 @@
 
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:splitcrow/constants/constants.dart';
 
@@ -39,9 +41,36 @@ class GroupContainer extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
-              RoundedButton(btn_name: 'VIEW', press: () {})
+              RoundedButton(btn_name: 'VIEW', press: () {
+                showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            scrollable: true,
+                            title: Text('${grp_name} Expenses'),
+                            content: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Form(
+                                child: Column(
+
+                                  children: <Widget>[
+                                   Text((grp_balance==0?"settled": grp_balance>0 ? "Member1 owes you Rs. ${grp_balance}" : "you owe Rs.${grp_balance} ") ,style: TextStyle(
+                                        fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: grp_balance==0?Color.fromARGB(255, 86, 85, 85) : grp_balance>0 ? Color.fromARGB(255, 123, 240, 127) : Color.fromARGB(255, 245, 155, 76),
+                                        ),)
+                                  ],
+
+                                ),
+                              ),
+                            ),
+                           
+                          );
+                       },
+                  );
+             })
+           ]
              
-            ],
         )
         
         

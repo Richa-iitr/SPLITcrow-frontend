@@ -52,7 +52,7 @@ class TittleNav extends StatelessWidget {
                                   children: <Widget>[
                                     TextFormField(
                                       decoration: InputDecoration(
-                                        labelText: 'With you and ..',
+                                        labelText: 'Group Name',
                                         icon:
                                             Icon(Icons.social_distance_rounded),
                                       ),
@@ -73,8 +73,8 @@ class TittleNav extends StatelessWidget {
                                     ),
                                     Text('  '),
                                     Row(children: [
-                                    Text('Paid by '),
-                                    Text('and split '),],),
+                                    Text('Paid by you '),
+                                    Text('and split equally'),],),
                                   ],
                                 ),
                               ),
@@ -87,12 +87,12 @@ class TittleNav extends StatelessWidget {
                                         btn_name: 'Submit', press: () {})
                                   ]),
                               Divider(color: Colors.black),
-                              Row(
-                                  mainAxisAlignment: MainAxisAlignment.center,
-                                  children: [
-                                    RoundedButton(
-                                        btn_name: 'UPI PAY', press: () {})
-                                  ]),
+                              // Row(
+                              //     mainAxisAlignment: MainAxisAlignment.center,
+                              //     children: [
+                              //       RoundedButton(
+                              //           btn_name: 'UPI PAY', press: () {})
+                              //     ]),
                             ],
                           );
                         });
