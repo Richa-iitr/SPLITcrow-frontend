@@ -16,7 +16,7 @@ class RoundedButton extends StatelessWidget {
         padding: const EdgeInsets.only(top: appPadding,bottom: appPadding /4),
         child: Container(
           padding: EdgeInsets.all(appPadding / 4),
-          width: 60,
+          // width: 60,
           height: 30,
           decoration: BoxDecoration(
               //shape: BoxShape.circle,
