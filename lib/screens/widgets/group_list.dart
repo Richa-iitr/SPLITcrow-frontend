@@ -37,8 +37,11 @@ class GroupContainer extends StatelessWidget {
           ),)
           ],
         ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children:[
          Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          // mainAxisAlignment: MainAxisAlignment.center,
 
             children: [
               RoundedButton(btn_name: 'VIEW', press: () {
@@ -68,11 +71,97 @@ class GroupContainer extends StatelessWidget {
                           );
                        },
                   );
-             })
+             }),
+             
            ]
              
-        )
-        
+        ),
+        Column(children: [Text('    ')],),
+        Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [RoundedButton(btn_name: 'Add Member', press: () {
+                showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            scrollable: true,
+                            title: Text('Add Friend'),
+                            content: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Form(
+                                child: Column(
+                                  children: <Widget>[
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Friend email',
+                                        icon:
+                                            Icon(Icons.people),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            actions: [
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    RoundedButton(
+                                        btn_name: 'Add Friend', press: () {})
+                                  ]),
+                              
+                            ],
+                          );
+                        });
+      })],),
+       Column(children: [Text('    ')],),
+        Column(
+          // mainAxisAlignment: MainAxisAlignment.center,
+          children: [RoundedButton(btn_name: 'Settle Up', press: () {
+                showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            scrollable: true,
+                            title: Text('Settle'),
+                            content: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Form(
+                                child: Column(
+                                  children: <Widget>[
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Member Mail',
+                                        icon:
+                                            Icon(Icons.people),
+                                      ),
+                                    ),
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Amount',
+                                        icon:
+                                            Icon(Icons.money),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            actions: [
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    RoundedButton(
+                                        btn_name: 'Settle', press: () {})
+                                  ]),
+                              
+                            ],
+                          );
+                        });
+      })],),
+      
+      
+      ])
         
       ],
       ),

@@ -42,7 +42,41 @@ class Group extends StatelessWidget {
               child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              RoundedButton(btn_name: ' + Add', press: () {}),
+              RoundedButton(btn_name: ' + Add', press: () {
+                showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            scrollable: true,
+                            title: Text('Add Group'),
+                            content: Padding(
+                              padding: const EdgeInsets.all(5.0),
+                              child: Form(
+                                child: Column(
+                                  children: <Widget>[
+                                    TextFormField(
+                                      decoration: InputDecoration(
+                                        labelText: 'Group Name',
+                                        icon:
+                                            Icon(Icons.people),
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ),
+                            actions: [
+                              Row(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    RoundedButton(
+                                        btn_name: 'Create', press: () {})
+                                  ]),
+                              
+                            ],
+                          );
+                        });
+              }),
               
             ],
           ),
