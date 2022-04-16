@@ -14,6 +14,7 @@ class RectangularInputField extends StatelessWidget {
   Widget build(BuildContext context) {
     return NeumorphicTextFieldContainer(
       child: TextField(
+        style: TextStyle(color: Colors. white),
         cursorColor: Colors.white,
         obscureText: obscureText,
         decoration: InputDecoration(

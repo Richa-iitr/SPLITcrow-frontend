@@ -1,7 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-//import 'package:neumorphic_signin_signup/screens/sign_in/sigin_screen.dart';
+import 'package:splitcrow/screens/sign_in/sigin_screen.dart';
 import 'package:splitcrow/screens/home.dart';
 
 
@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home:  Home(),
+      home:  SignInScreen(),
     );
   }
 }
