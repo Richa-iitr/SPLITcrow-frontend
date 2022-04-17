@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:splitcrow/screens/group.dart';
-//import 'package:splitcrow/screens/add.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar ({ Key? key }) : super(key: key);
@@ -21,6 +20,13 @@ class NavBar extends StatelessWidget {
       Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            const Divider(
+                                                        height: 10,
+                                                        thickness: 2,
+                                                        indent: 0,
+                                                        endIndent: 0,
+                                                        color: Colors.white,
+                                                      ),
             /*2*/
             GestureDetector(
               onTap:() {
@@ -33,6 +39,7 @@ class NavBar extends StatelessWidget {
               ),
             );
           } ,
+          
               child : Padding( 
               padding: const EdgeInsets.only(bottom: 8),
               child: const Text(
@@ -41,12 +48,19 @@ class NavBar extends StatelessWidget {
                   fontFamily: 'RaleWay',
                   fontWeight: FontWeight.bold,
                   color : Colors.white,
-                  fontSize: 26,
+                  fontSize: 24,
 
                 ),
               ),
               )
-            )
+            ),
+            const Divider(
+                                                        height: 10,
+                                                        thickness: 2,
+                                                        indent: 0,
+                                                        endIndent: 0,
+                                                        color: Colors.white,
+                                                      )
            
           ],
         ),
