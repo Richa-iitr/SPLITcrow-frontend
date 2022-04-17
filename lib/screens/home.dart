@@ -8,8 +8,7 @@ import 'package:splitcrow/screens/widgets/rounded_button.dart';
 
 
 class Home extends StatelessWidget {
-  //bool atHome; 
-  Home({ Key? key}) : super(key: key);
+  const Home({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +31,13 @@ class Home extends StatelessWidget {
             children: [
               TittleNav(),
               NavBar(),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              //FriendContainer(),
+              GroupContainer(grp_name: 'Roomies', grp_balance: 18),
+              GroupContainer(grp_name: 'Dubai Trip', grp_balance: 60),
+              GroupContainer(grp_name: 'Freshers', grp_balance: -850.5),
+              
+
+              
+              //GroupContainer(),
               //Social(),
               Padding(
               padding: const EdgeInsets.symmetric(horizontal: appPadding),
@@ -49,7 +50,7 @@ class Home extends StatelessWidget {
                         builder: (BuildContext context) {
                           return AlertDialog(
                             scrollable: true,
-                            title: Text('Add Friend'),
+                            title: Text('Add Group'),
                             content: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: Form(
@@ -57,7 +58,7 @@ class Home extends StatelessWidget {
                                   children: <Widget>[
                                     TextFormField(
                                       decoration: InputDecoration(
-                                        labelText: 'Friend email',
+                                        labelText: 'Group Name',
                                         icon:
                                             Icon(Icons.people),
                                       ),
@@ -71,7 +72,9 @@ class Home extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Add Friend', press: () {})
+                                        btn_name: 'Create', press: () {
+                                          
+                                        })
                                   ]),
                               
                             ],

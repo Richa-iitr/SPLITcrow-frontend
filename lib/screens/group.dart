@@ -5,6 +5,7 @@ import 'package:splitcrow/screens/widgets/navbar.dart';
 import 'package:splitcrow/screens/widgets/friend_list.dart';
 import 'package:splitcrow/screens/widgets/group_list.dart';
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/home.dart';
 
 
 class Group extends StatelessWidget {
@@ -32,9 +33,8 @@ class Group extends StatelessWidget {
               TittleNav(),
               NavBar(),
               GroupContainer(grp_name: 'roomies', grp_balance: 18),
-              GroupContainer(grp_name: 'roomies', grp_balance: 0),
-              GroupContainer(grp_name: 'roomies', grp_balance: -18),
-              GroupContainer(grp_name: 'roomies', grp_balance: 17.98),
+              
+              
               //GroupContainer(),
               //Social(),
               Padding(
@@ -70,7 +70,16 @@ class Group extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Create', press: () {})
+                                        btn_name: 'Create', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return Home();
+                                                },
+                                              ),
+                                          );
+                                        })
                                   ]),
                               
                             ],
