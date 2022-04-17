@@ -48,7 +48,7 @@ class SettleUp extends StatelessWidget {
                         builder: (BuildContext context) {
                           return AlertDialog(
                             scrollable: true,
-                            title: Text('Add SettleUp'),
+                            title: Text('Add Group'),
                             content: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: Form(
@@ -56,7 +56,7 @@ class SettleUp extends StatelessWidget {
                                   children: <Widget>[
                                     TextFormField(
                                       decoration: InputDecoration(
-                                        labelText: 'SettleUp Name',
+                                        labelText: 'Group Name',
                                         icon:
                                             Icon(Icons.people),
                                       ),
