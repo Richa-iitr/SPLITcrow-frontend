@@ -5,11 +5,11 @@ import 'package:splitcrow/screens/widgets/navbar.dart';
 import 'package:splitcrow/screens/widgets/friend_list.dart';
 import 'package:splitcrow/screens/widgets/group_list.dart';
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/add.dart';
 
 
-class Home extends StatelessWidget {
-  //bool atHome; 
-  Home({ Key? key}) : super(key: key);
+class SettleUp extends StatelessWidget {
+  const SettleUp({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,11 +32,10 @@ class Home extends StatelessWidget {
             children: [
               TittleNav(),
               NavBar(),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              FriendContainer(frnd_username: 'sakshi', frnd_balance: 18),
-              //FriendContainer(),
+              GroupContainer(grp_name: 'Roomies', grp_balance: 18),
+              GroupContainer(grp_name: 'Freshers', grp_balance: -400.5),
+              GroupContainer(grp_name: 'Dubai Trip', grp_balance: 60),
+              //SettleUpContainer(),
               //Social(),
               Padding(
               padding: const EdgeInsets.symmetric(horizontal: appPadding),
@@ -49,7 +48,7 @@ class Home extends StatelessWidget {
                         builder: (BuildContext context) {
                           return AlertDialog(
                             scrollable: true,
-                            title: Text('Add Friend'),
+                            title: Text('Add SettleUp'),
                             content: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: Form(
@@ -57,7 +56,7 @@ class Home extends StatelessWidget {
                                   children: <Widget>[
                                     TextFormField(
                                       decoration: InputDecoration(
-                                        labelText: 'Friend email',
+                                        labelText: 'SettleUp Name',
                                         icon:
                                             Icon(Icons.people),
                                       ),
@@ -71,7 +70,16 @@ class Home extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Add Friend', press: () {})
+                                        btn_name: 'Create', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return add();
+                                                },
+                                              ),
+                                          );
+                                        })
                                   ]),
                               
                             ],

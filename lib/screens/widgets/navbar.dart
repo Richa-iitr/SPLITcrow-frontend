@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splitcrow/screens/group.dart';
-import 'package:splitcrow/screens/home.dart';
+//import 'package:splitcrow/screens/add.dart';
 
 class NavBar extends StatelessWidget {
   const NavBar ({ Key? key }) : super(key: key);
