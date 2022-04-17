@@ -31,10 +31,9 @@ class Group extends StatelessWidget {
             children: [
               TittleNav(),
               NavBar(),
-              GroupContainer(grp_name: 'roomies', grp_balance: 18),
-              GroupContainer(grp_name: 'roomies', grp_balance: 0),
-              GroupContainer(grp_name: 'roomies', grp_balance: -18),
-              GroupContainer(grp_name: 'roomies', grp_balance: 17.98),
+              GroupContainer(grp_name: 'Roomies', grp_balance: 18),
+              GroupContainer(grp_name: 'Dubai Trip', grp_balance: 60),
+              GroupContainer(grp_name: 'Freshers', grp_balance: -400.5),
               //GroupContainer(),
               //Social(),
               Padding(
