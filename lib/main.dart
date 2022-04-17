@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:splitcrow/screens/sign_in/sigin_screen.dart';
-import 'package:splitcrow/screens/home.dart';
+import 'package:splitcrow/screens/add.dart';
 
 
 void main() {

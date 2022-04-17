@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:splitcrow/constants/constants.dart';
 
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/addmemeber.dart';
+import 'package:splitcrow/screens/addexpense.dart';
+import 'package:splitcrow/screens/settleup.dart';
 
 
 
@@ -191,7 +194,16 @@ class GroupContainer extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Add Friend', press: () {})
+                                        btn_name: 'Add Friend', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return AddMember();
+                                                },
+                                              ),
+                                          );
+                                        })
                                   ]),
                               
                             ],
@@ -237,6 +249,14 @@ class GroupContainer extends StatelessWidget {
                                   children: [
                                     RoundedButton(
                                         btn_name: 'Settle', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return SettleUp();
+                                                },
+                                              ),
+                                          );
                                           showDialog(
                                           context: context,
                                           builder: (BuildContext context) {
@@ -257,7 +277,7 @@ class GroupContainer extends StatelessWidget {
                                                         color: Colors.black,
                                                       ),
                                                       Text('   '),
-                                                      Text('Hurray! Expenses settled for ${grp_name}')
+                                                      Text('Hurray! Expenses settled for mayank in ${grp_name}')
                                                     ],
                                                   ),
                                                 ),
@@ -265,6 +285,7 @@ class GroupContainer extends StatelessWidget {
                                               
                                             );
                                           });
+                                          
                                         }),
                                       const Divider(
                                           height: 20,

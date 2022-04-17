@@ -8,8 +8,8 @@ import 'package:splitcrow/screens/widgets/rounded_button.dart';
 import 'package:splitcrow/screens/add.dart';
 
 
-class Group extends StatelessWidget {
-  const Group({ Key? key }) : super(key: key);
+class AddExpense extends StatelessWidget {
+  const AddExpense({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +34,7 @@ class Group extends StatelessWidget {
               NavBar(),
               GroupContainer(grp_name: 'Roomies', grp_balance: 18),
               GroupContainer(grp_name: 'Freshers', grp_balance: -850.5),
+              GroupContainer(grp_name: 'Dubai Trip', grp_balance: 60),
               //GroupContainer(),
               //Social(),
               Padding(

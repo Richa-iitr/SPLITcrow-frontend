@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/addexpense.dart';
 import 'package:splitcrow/screens/sign_in/sigin_screen.dart';
 
 
@@ -85,7 +86,16 @@ class TittleNav extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Submit', press: () {})
+                                        btn_name: 'Submit', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return AddExpense();
+                                                },
+                                              ),
+                                          );
+                                        })
                                   ]),
                               Divider(color: Colors.black),
                               // Row(
