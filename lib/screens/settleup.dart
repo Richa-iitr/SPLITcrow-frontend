@@ -5,10 +5,11 @@ import 'package:splitcrow/screens/widgets/navbar.dart';
 import 'package:splitcrow/screens/widgets/friend_list.dart';
 import 'package:splitcrow/screens/widgets/group_list.dart';
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/add.dart';
 
 
-class Home extends StatelessWidget {
-  const Home({ Key? key }) : super(key: key);
+class SettleUp extends StatelessWidget {
+  const SettleUp({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +33,9 @@ class Home extends StatelessWidget {
               TittleNav(),
               NavBar(),
               GroupContainer(grp_name: 'Roomies', grp_balance: 18),
+              GroupContainer(grp_name: 'Freshers', grp_balance: -400.5),
               GroupContainer(grp_name: 'Dubai Trip', grp_balance: 60),
-              GroupContainer(grp_name: 'Freshers', grp_balance: -850.5),
-              
-
-              
-              //GroupContainer(),
+              //SettleUpContainer(),
               //Social(),
               Padding(
               padding: const EdgeInsets.symmetric(horizontal: appPadding),
@@ -50,7 +48,7 @@ class Home extends StatelessWidget {
                         builder: (BuildContext context) {
                           return AlertDialog(
                             scrollable: true,
-                            title: Text('Add Group'),
+                            title: Text('Add SettleUp'),
                             content: Padding(
                               padding: const EdgeInsets.all(5.0),
                               child: Form(
@@ -58,7 +56,7 @@ class Home extends StatelessWidget {
                                   children: <Widget>[
                                     TextFormField(
                                       decoration: InputDecoration(
-                                        labelText: 'Group Name',
+                                        labelText: 'SettleUp Name',
                                         icon:
                                             Icon(Icons.people),
                                       ),
@@ -73,7 +71,14 @@ class Home extends StatelessWidget {
                                   children: [
                                     RoundedButton(
                                         btn_name: 'Create', press: () {
-                                          
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return add();
+                                                },
+                                              ),
+                                          );
                                         })
                                   ]),
                               

@@ -5,11 +5,10 @@ import 'package:splitcrow/screens/widgets/navbar.dart';
 import 'package:splitcrow/screens/widgets/friend_list.dart';
 import 'package:splitcrow/screens/widgets/group_list.dart';
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
-import 'package:splitcrow/screens/add.dart';
 
 
-class Group extends StatelessWidget {
-  const Group({ Key? key }) : super(key: key);
+class add extends StatelessWidget {
+  const add({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -34,6 +33,11 @@ class Group extends StatelessWidget {
               NavBar(),
               GroupContainer(grp_name: 'Roomies', grp_balance: 18),
               GroupContainer(grp_name: 'Freshers', grp_balance: -850.5),
+              GroupContainer(grp_name: 'Dubai Trip', grp_balance: 0),
+              
+              
+
+              
               //GroupContainer(),
               //Social(),
               Padding(
@@ -70,14 +74,7 @@ class Group extends StatelessWidget {
                                   children: [
                                     RoundedButton(
                                         btn_name: 'Create', press: () {
-                                          Navigator.push(
-                                                          context,
-                                              MaterialPageRoute(
-                                               builder: (context) {
-                                                return add();
-                                                },
-                                              ),
-                                          );
+                                          
                                         })
                                   ]),
                               

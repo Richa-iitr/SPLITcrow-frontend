@@ -5,6 +5,9 @@ import 'package:flutter/material.dart';
 import 'package:splitcrow/constants/constants.dart';
 
 import 'package:splitcrow/screens/widgets/rounded_button.dart';
+import 'package:splitcrow/screens/addmemeber.dart';
+import 'package:splitcrow/screens/addexpense.dart';
+import 'package:splitcrow/screens/settleup.dart';
 
 
 
@@ -57,11 +60,95 @@ class GroupContainer extends StatelessWidget {
                                 child: Column(
 
                                   children: <Widget>[
-                                   Text((grp_balance==0?"settled": grp_balance>0 ? "Member1 owes you Rs. ${grp_balance}" : "you owe Rs.${grp_balance} ") ,style: TextStyle(
+                                   
+
+                                        // Row(
+                                        //   children: [Text(("You ") ,style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 4, 129, 238),
+                                        // ),),
+                                        // Text(("owe Rs. 450.0 to "), style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 86, 85, 85),
+                                        // ),),
+                                        // Text(("Mayank ") ,style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 4, 129, 238),
+                                        // ),),]),
+
+
+                                        // Row(
+                                        //   children: [Text(("You ") ,style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 4, 129, 238),
+                                        // ),),
+                                        // Text(("owe Rs. 400.5 to "), style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 86, 85, 85),
+                                        // ),),
+                                        // Text(("Parth ") ,style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 4, 129, 238),
+                                        // ),),]),
+
+
+                                         Row(
+                                          children: [Text(("Ashutosh ") ,style: TextStyle(
                                         fontSize: 15,
                                           fontWeight: FontWeight.w600,
-                                          color: grp_balance==0?Color.fromARGB(255, 86, 85, 85) : grp_balance>0 ? Color.fromARGB(255, 123, 240, 127) : Color.fromARGB(255, 245, 155, 76),
-                                        ),)
+                                          color: Color.fromARGB(255, 4, 129, 238),
+                                        ),),
+                                        Text(("owes Rs. 450.0 to "), style: TextStyle(
+                                        fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color.fromARGB(255, 86, 85, 85),
+                                        ),),
+                                        Text(("Mayank ") ,style: TextStyle(
+                                        fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color.fromARGB(255, 4, 129, 238),
+                                        ),),]),
+
+
+                                        Row(
+                                          children: [Text(("Pragyansh ") ,style: TextStyle(
+                                        fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color.fromARGB(255, 4, 129, 238),
+                                        ),),
+                                        Text(("owes Rs. 400.5 to "), style: TextStyle(
+                                        fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color.fromARGB(255, 86, 85, 85),
+                                        ),),
+                                        Text(("Parth ") ,style: TextStyle(
+                                        fontSize: 15,
+                                          fontWeight: FontWeight.w600,
+                                          color: Color.fromARGB(255, 4, 129, 238),
+                                        ),),]),
+                                        // Row(
+                                        //   children: [Text(("Alice ") ,style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 4, 129, 238),
+                                        // ),),
+                                        // Text(("owes Rs.20 to "), style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 86, 85, 85),
+                                        // ),),
+                                        // Text(("Bill ") ,style: TextStyle(
+                                        // fontSize: 15,
+                                        //   fontWeight: FontWeight.w600,
+                                        //   color: Color.fromARGB(255, 4, 129, 238),
+                                        // ),),]),
+                                        
                                   ],
 
                                 ),
@@ -107,7 +194,16 @@ class GroupContainer extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Add Friend', press: () {})
+                                        btn_name: 'Add Friend', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return AddMember();
+                                                },
+                                              ),
+                                          );
+                                        })
                                   ]),
                               
                             ],
@@ -152,9 +248,86 @@ class GroupContainer extends StatelessWidget {
                                   mainAxisAlignment: MainAxisAlignment.center,
                                   children: [
                                     RoundedButton(
-                                        btn_name: 'Settle', press: () {})
-                                  ]),
-                              
+                                        btn_name: 'Settle', press: () {
+                                          Navigator.push(
+                                                          context,
+                                              MaterialPageRoute(
+                                               builder: (context) {
+                                                return SettleUp();
+                                                },
+                                              ),
+                                          );
+                                          showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              scrollable: true,
+                                              title: Text('Settle'),
+                                             
+                                              content: Padding(
+                                                padding: const EdgeInsets.all(5.0),
+                                                child: Form(
+                                                  child: Column(
+                                                    children: <Widget>[
+                                                      const Divider(
+                                                        height: 2,
+                                                        thickness: 1,
+                                                        indent: 10,
+                                                        endIndent: 0,
+                                                        color: Colors.black,
+                                                      ),
+                                                      Text('   '),
+                                                      Text('Hurray! Expenses settled for mayank in ${grp_name}')
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              
+                                            );
+                                          });
+                                          
+                                        }),
+                                      const Divider(
+                                          height: 20,
+                                          thickness: 5,
+                                          indent: 20,
+                                          endIndent: 0,
+                                          color: Colors.black,
+                                        ),
+                                      RoundedButton(
+                                        btn_name: 'UPI Pay', press: () {
+                                          showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              scrollable: true,
+                                              title: Text('Settle'),
+                                             
+                                              content: Padding(
+                                                padding: const EdgeInsets.all(5.0),
+                                                child: Form(
+                                                  child: Column(
+                                                    children: <Widget>[
+                                                      const Divider(
+                                                        height: 2,
+                                                        thickness: 1,
+                                                        indent: 10,
+                                                        endIndent: 0,
+                                                        color: Colors.black,
+                                                      ),
+                                                      Text('   '),
+                                                      Text('Coming Soon! Stay Tuned!')
+                                                    ],
+                                                  ),
+                                                ),
+                                              ),
+                                              
+                                            );
+                                          });
+                                        }),
+                                        ]
+                                        ),
+                                    
                             ],
                           );
                         });
