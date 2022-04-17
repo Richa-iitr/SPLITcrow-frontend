@@ -38,8 +38,11 @@ class NavBar extends StatelessWidget {
               child: const Text(
                 'Groups Activity',
                 style: TextStyle(
+                  fontFamily: 'RaleWay',
                   fontWeight: FontWeight.bold,
-                  color : Colors.white
+                  color : Colors.white,
+                  fontSize: 26,
+
                 ),
               ),
               )
